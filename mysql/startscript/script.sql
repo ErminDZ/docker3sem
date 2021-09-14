@@ -3,7 +3,7 @@ CREATE DATABASE startcode_test;
 CREATE DATABASE dev_db;
 
 # create root user and grant rights
-CREATE USER 'dev'@'%' IDENTIFIED BY 'ax2';
+CREATE USER 'dev'@'%' IDENTIFIED BY 'Qqnfyeiy1997';
 GRANT ALL ON *.* TO 'dev'@'%';
 
 -- GRANT ALL PRIVILEGES ON startcode.* TO 'dev'@'%';

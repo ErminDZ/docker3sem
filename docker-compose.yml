@@ -2,12 +2,13 @@ version: "3.7"
 services:
   db:
     # image: mysql:8.0
+    platform: linux/amd64
     build: ./mysql/
     container_name: mysql_3sem
     restart: unless-stopped 
     
     environment:
-      MYSQL_ROOT_PASSWORD: "MYSQL_SECRET_ROOT_PASSWORD"
+      MYSQL_ROOT_PASSWORD: "Qqnfyeiy1997"
       TZ: "Europe/Copenhagen"
     ports:
       # <Port exposed> : < MySQL Port running inside container>
@@ -26,6 +27,7 @@ services:
 
   web:
     # image:  tomcat:9.0.37-jdk8
+    platform: linux/amd64
     build: ./tomcat/
     container_name: tomcat_3sem
     restart: unless-stopped
@@ -36,7 +38,7 @@ services:
     environment:
       CONNECTION_STR: "jdbc:mysql://db:3306/" # the database is set in the pom.xml file for each project
       USER: "dev" # database user to use in tomcat apps
-      PW: "ax2" # database password
+      PW: "Qqnfyeiy1997" # database password
       DEPLOYED: "PROD"
 
     ports:
